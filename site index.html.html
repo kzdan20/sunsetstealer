@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SunsetStealer Login</title>
+
 <style>
   body {
     margin: 0;
@@ -14,12 +15,14 @@
     color: white;
     height: 100vh;
   }
+
   canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
   }
+
   .container {
     position: relative;
     z-index: 1;
@@ -29,6 +32,7 @@
     justify-content: center;
     height: 100vh;
   }
+
   h1 {
     font-style: italic;
     font-size: 3em;
@@ -39,11 +43,13 @@
     animation: colorShift 4s infinite linear;
     margin-bottom: 1em;
   }
+
   @keyframes colorShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
   .form-box {
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid #00ff00;
@@ -53,6 +59,7 @@
     text-align: center;
     box-shadow: 0 0 20px #00ff00;
   }
+
   input, textarea, select {
     width: 100%;
     padding: 10px;
@@ -62,6 +69,7 @@
     color: #00ff00;
     border-radius: 5px;
   }
+
   button {
     width: 100%;
     padding: 10px;
@@ -73,18 +81,23 @@
     border-radius: 5px;
     margin-top: 10px;
   }
+
   button:hover { background: #00cc00; }
+
   a {
     display: block;
     color: #00ffff;
     margin-top: 10px;
     text-decoration: none;
   }
+
   .hidden { display: none; }
+
   .dashboard {
     text-align: center;
     margin-top: 3em;
   }
+
   .ad, .user {
     background: rgba(0, 255, 0, 0.1);
     border: 1px solid #00ff00;
@@ -93,15 +106,33 @@
     width: 260px;
     border-radius: 10px;
   }
+
+  /* --- ADMIN DASHBOARD FIXED STYLING --- */
   .admin-table {
     width: 90%;
     margin: 1em auto;
     border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #00ff00; /* Green text */
   }
+
   .admin-table th, .admin-table td {
     border: 1px solid #00ff00;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
+  }
+
+  .admin-table th {
+    background: rgba(0, 255, 0, 0.2); /* Slightly lighter header */
+    color: #00ffff; /* Cyan text */
+  }
+
+  .admin-table tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.05); /* Alternating rows */
+  }
+
+  .admin-table tr:nth-child(odd) {
+    background: rgba(0, 255, 0, 0.15);
   }
 </style>
 </head>
@@ -351,5 +382,6 @@ function sendMessage() {
   document.getElementById("msgText").value = "";
 }
 </script>
+
 </body>
 </html>
